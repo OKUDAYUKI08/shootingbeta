@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float speed = 5.0f; // 移動速度
 
-    // Update is called once per frame
     void Update()
     {
-        
+        float xMovement = Input.GetAxis("Horizontal") * speed * Time.deltaTime; // 左右の移動
+        float zMovement = Input.GetAxis("Vertical") * speed * Time.deltaTime; // 前後の移動
+
+        transform.Translate(xMovement, 0, zMovement); // オブジェクトの位置を更新
     }
 }
