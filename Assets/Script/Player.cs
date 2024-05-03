@@ -10,7 +10,6 @@ public class Player : MonoBehaviour
     {
         float xMovement = Input.GetAxis("Horizontal") * speed * Time.deltaTime; // 左右の移動
         float zMovement = Input.GetAxis("Vertical") * speed * Time.deltaTime; // 前後の移動
-
         transform.Translate(xMovement, 0, zMovement); // オブジェクトの位置を更新
     }
 }
