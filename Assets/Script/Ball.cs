@@ -9,9 +9,10 @@ public class Ball : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         BallTransform=GetComponent<Transform>();
         BallRigidbody=GetComponent<Rigidbody>();
-        BallRigidbody.velocity = new Vector3(0, 0, 0);
+        BallRigidbody.velocity = new Vector3(0, -5.0f, 0);
     }
 
     // Update is called once per frame
