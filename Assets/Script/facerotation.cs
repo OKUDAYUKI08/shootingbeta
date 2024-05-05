@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class facerotation : MonoBehaviour
 {
-    public GameObject player;
+
 
     // Update is called once per frame
     void Update()
@@ -25,7 +25,7 @@ public class facerotation : MonoBehaviour
         if (Mathf.Abs(mx) > 0.001f)
         {
             // 回転軸はワールド座標のY軸
-            transform.RotateAround(player.transform.position, Vector3.up, mx);
+            transform.RotateAround(transform.position, Vector3.up, mx);
 
         }
     }

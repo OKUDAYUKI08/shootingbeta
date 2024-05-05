@@ -12,7 +12,7 @@ public class Ball : MonoBehaviour
         
         BallTransform=GetComponent<Transform>();
         BallRigidbody=GetComponent<Rigidbody>();
-        BallRigidbody.velocity = new Vector3(0, -5.0f, 0);
+        BallRigidbody.velocity = new Vector3(0, -40.0f, 0);
     }
 
     // Update is called once per frame
