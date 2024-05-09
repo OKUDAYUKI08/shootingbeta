@@ -8,12 +8,19 @@ public class Player : MonoBehaviour
 
     public GameObject player;
 
+    private float min=-44f;
+    private float max=44f;
     void Update()
     {
+        var currentpos=transform.position;
+        currentpos.z=Mathf.Clamp(currentpos.z,min,max);
+        currentpos.x=Mathf.Clamp(currentpos.x,min,max);
+        transform.position=currentpos;
         // Playerの前後左右の移動
         float xMovement = Input.GetAxis("Horizontal") * speed * Time.deltaTime; // 左右の移動
         float zMovement = Input.GetAxis("Vertical") * speed * Time.deltaTime; // 前後の移動
         transform.Translate(xMovement, 0, zMovement); // オブジェクトの位置を更新
+
 
         // マウスカーソルでPlayerを横回転
         float mx = Input.GetAxis("Mouse X");
