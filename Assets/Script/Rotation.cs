@@ -19,13 +19,13 @@ public class Rotation : MonoBehaviour
 			currentYAngle = currentYAngle - 360;
 		}
         if(Input.GetMouseButton(0)){
-            if(currentYAngle<45){
+            if(currentYAngle<maxangle){
                 saucer.transform.Rotate(new Vector3(0,0,1));    
             }
 
         }
         if(Input.GetMouseButton(1)){
-            if(currentYAngle>-45){
+            if(currentYAngle>minangle){
                 saucer.transform.Rotate(new Vector3(0,0,-1));
             }
 

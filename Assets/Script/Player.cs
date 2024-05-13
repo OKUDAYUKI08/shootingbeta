@@ -28,16 +28,18 @@ public class Player : MonoBehaviour
         if (Mathf.Abs(mx) > 0.001f) // X方向に一定量移動していれば横回転
         {
             transform.RotateAround(player.transform.position, Vector3.up, mx); // 回転軸はplayerオブジェクトのワールド座標Y軸
-            transform.Rotate(0,mx,0);
-
         }
 
-        // // Y方向に一定量移動していれば縦回転
-        // if (Mathf.Abs(my) > 0.001f)
-        // {
-        //     // 回転軸はカメラ自身のX軸
-        //     transform.RotateAround(player.transform.position, transform.right, -my);
-        // }
+        if(Input.GetMouseButton(0)){
+            mx+=1;
+            transform.RotateAround(player.transform.position, Vector3.up, mx);   
+
+
+        }
+        if(Input.GetMouseButton(1)){
+            mx-=1;
+            transform.RotateAround(player.transform.position, Vector3.up, mx); 
+        }
 
 
     }
