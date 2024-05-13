@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private float speed = 30.0f; // 移動速度
+    private float speed = 40f; // 移動速度
 
     public GameObject player;
 
@@ -23,20 +23,20 @@ public class Player : MonoBehaviour
 
 
         // マウスカーソルでPlayerを横回転
-        float mx = Input.GetAxis("Mouse X");
-        float my = Input.GetAxis("Mouse Y");
+        float mx = Input.GetAxis("Mouse X")*10;
+        float my = Input.GetAxis("Mouse Y")*10;
         if (Mathf.Abs(mx) > 0.001f) // X方向に一定量移動していれば横回転
         {
             transform.RotateAround(player.transform.position, Vector3.up, mx); // 回転軸はplayerオブジェクトのワールド座標Y軸
         }
 
-        if(Input.GetMouseButton(0)){
+        if(Input.GetMouseButton(1)){
             mx+=1;
             transform.RotateAround(player.transform.position, Vector3.up, mx);   
 
 
         }
-        if(Input.GetMouseButton(1)){
+        if(Input.GetMouseButton(0)){
             mx-=1;
             transform.RotateAround(player.transform.position, Vector3.up, mx); 
         }
