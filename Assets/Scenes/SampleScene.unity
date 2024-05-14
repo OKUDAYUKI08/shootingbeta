@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 18006825}
   - component: {fileID: 18006824}
   - component: {fileID: 18006823}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2868,7 +2868,7 @@ GameObject:
   - component: {fileID: 488882413}
   - component: {fileID: 488882412}
   - component: {fileID: 488882411}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Saucer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6120,7 +6120,8 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194231}
-  m_Layer: 0
+  - component: {fileID: 963194232}
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -6214,6 +6215,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1082674173}
+--- !u!114 &963194232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19a496ca97ec463d8b7a07a723d6304, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &969456914
 GameObject:
   m_ObjectHideFlags: 0
@@ -7173,7 +7186,7 @@ GameObject:
   - component: {fileID: 1082674175}
   - component: {fileID: 1082674174}
   - component: {fileID: 1082674176}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
