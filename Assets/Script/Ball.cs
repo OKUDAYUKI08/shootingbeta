@@ -20,7 +20,6 @@ public class Ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(BallRigidbody.velocity.magnitude);
     }
     void OnCollisionEnter(Collision other){
         Vector3 Balldire=BallRigidbody.velocity;
