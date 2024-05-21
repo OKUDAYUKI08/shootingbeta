@@ -10,7 +10,6 @@ public class TrajectoryPredictor : MonoBehaviour
     public GameObject markerprefab;
 
     Vector3 hitpos;
-    private GameObject marker;
 
     void Start()
     {
@@ -55,14 +54,6 @@ public class TrajectoryPredictor : MonoBehaviour
             currentPosition += currentVelocity * timeBetweenPoints;
 
         }
-        if(!marker){
-            marker=Instantiate(markerprefab,hitpos,markerprefab.transform.rotation);
-        }
-        else{
-            marker.transform.position=hitpos;
-        }
-
-
         // LineRendererにポイントを設定
         lineRenderer.positionCount = numPoints;
         lineRenderer.SetPositions(points);
