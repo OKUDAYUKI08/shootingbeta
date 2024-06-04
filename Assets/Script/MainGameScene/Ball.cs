@@ -13,9 +13,14 @@ public class Ball : MonoBehaviour
         
         BallTransform=GetComponent<Transform>();
         BallRigidbody=GetComponent<Rigidbody>();
-        BallRigidbody.velocity = new Vector3(10, -23.0f, 0);
+
 
     }
+    void GameStart(){
+        BallRigidbody.velocity = new Vector3(10, -23.0f, 0);
+    }
+
+    
 
     // Update is called once per frame
     void Update()
